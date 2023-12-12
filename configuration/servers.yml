@@ -1,0 +1,47 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~                                  ~
+# ~            crazyhub              ~
+# ~                                  ~
+# ~ Version: 1.0.1                   ~
+# ~ Author: kerpson                  ~
+# ~ Website: www.crazycast.eu        ~
+# ~                                  ~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# PL: Lista serwerów
+# EN: List of servers
+servers:
+- survival
+- skyblock
+# PL: Konfiguracja informacji serwera
+# EN: Server info configuration
+server-info-configuration:
+  # PL: Zmienne dla róznych typów statusu serwera
+  # EN: Variables for different types of server status
+  server-status-variable:
+    WHITELIST: '&9Whitelist'
+    ONLINE: '&aOnline'
+    FULL: '&6Full'
+    PENDING: '&ePending...'
+    OFFLINE: '&cOffline'
+  # PL: Jaki typ konfiguracji ma być obsługiwany?
+  #     REDIS - Dla komunikacji redis
+  #     PLUGIN_MESSAGE_CHANNEL - Dla komunikacji bungeecord/velocity
+  # EN: What type of configuration is to be supported?
+  #     REDIS - For redis server
+  #     PLUGIN_MESSAGE_CHANNEL - Default bungeecord/velocity messaging
+  communication-type: PLUGIN_MESSAGE_CHANNEL
+  # PL: Konfiguracja dla serwera redis
+  # EN: Configuration for redis communication type
+  redis-configuration:
+    port: 6379
+    hostname: localhost
+    password: superSecretPassword
+# PL: Wiadomość o próbie łącznia z serwerem
+#     Dostępne zmienne: {server}
+# EN: Message about an attempt to connect to the server
+#     Placeholders: {server}
+server-connect-message:
+  messages:
+    title: '&aTry to connect server {server}...'
+  extra-components:
+    title: fade-in(500) stay(3500) fade-out(1000)
