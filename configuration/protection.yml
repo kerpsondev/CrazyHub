@@ -1,0 +1,47 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~                                  ~
+# ~            crazyhub              ~
+# ~                                  ~
+# ~ Version: 1.0.1                   ~
+# ~ Author: kerpson                  ~
+# ~ Website: www.crazycast.eu        ~
+# ~                                  ~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# PL: Konfiguracja flag
+# EN: Flags configuration
+protection-flags:
+  BUILD:
+    enable: true
+  DAMAGE:
+    enable: true
+  HUNGER:
+    enable: true
+  EXPLODE:
+    enable: true
+  INTERACT:
+    enable: true
+  ITEM_DROP:
+    enable: true
+  MOBS_SPAWN:
+    enable: true
+  ITEM_PICKUP:
+    enable: true
+  ANIMALS_SPAWN:
+    enable: true
+  INVENTORY_CLICK:
+    enable: true
+# PL: Komunikat podczas zmiany stanu trybu bypass
+#     Tryb obejścia działa tylko dla flag: BUILD, INTERACT, INVENTORY_CLICK, ITEM_DROP, ITEM_PICKUP
+# EN: Message during bypass mode status change
+#     Bypass mode only works for the flags: BUILD, INTERACT, INVENTORY_CLICK, ITEM_DROP, ITEM_PICKUP
+bypass-status-messages:
+  INACTIVE:
+    messages:
+      title: '&b&lProtectionBypass{new}&aBypass is now disable'
+    extra-components:
+      title: fade-in(500) stay(3500) fade-out(1000)
+  ACTIVE:
+    messages:
+      title: '&b&lProtectionBypass{new}&aBypass is now enable!'
+    extra-components:
+      title: fade-in(500) stay(3500) fade-out(1000)
