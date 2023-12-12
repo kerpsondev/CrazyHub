@@ -1,0 +1,494 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~                                  ~
+# ~            crazyhub              ~
+# ~                                  ~
+# ~ Version: 1.0.1                   ~
+# ~ Author: kerpson                  ~
+# ~ Website: www.crazycast.eu        ~
+# ~                                  ~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# PL: Konfiguracja sidebaru
+# EN: Configuration sidebar
+sidebar-configuration:
+  # PL: Czy funkcja ma być aktywna?
+  # EN: Should the feature be enabled?
+  enable: true
+  # PL: Lista sidebarów
+  #     Dostępne zmienne: {player}
+  #     Wspiera PlaceholderAPI
+  # EN: Sidebar list
+  #     Placeholders: {player}
+  #     Support PlaceholderAPI
+  sidebars:
+  - title: '&b&lCrazyHub'
+    lines:
+    - ''
+    - '&7Hello &a{player}'
+    - '&7Nice to see you!'
+    - ''
+    - '&eYou are currently using'
+    - '&ethe CrazyHub plugin'
+    - ''
+    - '&b&ohttps://www.crazycast.eu'
+  # PL: Co ile czasu sidebar ma być zmieniany
+  # EN: Every how many seconds the sidebar should be switched
+  switch-time: 1m
+# PL: Konfiguracja przedmiotów
+# EN: Item configuration
+super-items-configuration:
+  # PL: Konfiguracja niestandardowej mapy
+  # EN: Custom map configuration
+  map-super-item-configuration:
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+    # PL: Link do grafiki, która ma być wyświetlana na mapie
+    # EN: Link to image displayed on map
+    url: https://i.ibb.co/vByXZ1T/Safeimagekit-resized-img.png
+    # PL: Czy uprawnienie jest wymagane? Bez niego gracz nie otrzyma mapy
+    #     Uprawnienie: crazyhub.super_item.map
+    # EN: Whether the permission is to be required? Without it, the player will not receive the map
+    #     Permission: crazyhub.super_item.map
+    permissionRequired: false
+    # PL: Opis przedmiotu
+    # EN: Item lore
+    lore:
+    - '&7Is it &2CrazyCast &7logo?!'
+    # PL: Nazwa przedmiotu
+    # EN: Item name
+    name: '&aVisite us!'
+    # PL: Slot w którym przedmiot powinien być umiejscowiony
+    # EN: Slot in which the item should be placed
+    slot: 7
+  # PL: Konfiguracja przedmiotu do wyboru serwerów
+  # EN: Item configuration for server selection
+  server-selection-item-configuration:
+    # PL: Odstęp czasowy pomiędzy użyciem
+    # EN: Delay between using
+    delay: 10s
+    # PL: Slot w którym przedmiot powinien być umiejscowiony
+    # EN: Slot in which the item should be placed
+    slot: 4
+    # PL: Wiadomość wysyłana podczas interakcji
+    #     Dostępne zmienne: {delay}
+    # EN: Message sent when player has to wait until next interact
+    #     Placeholders: {delay}
+    delay-message:
+      messages:
+        chat: '&cYou must wait {delay}!'
+      extra-components: {}
+    # PL: Przedmiot dawany do ekwipunku
+    # EN: Item given to the inventory
+    item:
+      type: compass
+      amount: 1
+      display-name: '&aClick to select server!'
+      lore:
+      - '&8#By CrazyCast team :D'
+      enchantments:
+        durability: 10
+  # PL: Konfiguracja książki informacyjnej
+  # EN: Configuring information book
+  information-book-super-item-configuration:
+    # PL: Wiadomość wysyłana podczas interakcji
+    # EN: Message sent when player has to wait until next interact
+    # EN: Placeholders: {delay}
+    delay-message:
+      messages:
+        chat: '&cYou must wait {delay}!'
+      extra-components: {}
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+    # PL: Odstęp czasowy pomiędzy użyciem
+    # EN: Delay between using
+    delay: 10s
+    # PL: Slot w którym przedmiot powinien być umiejscowiony
+    # EN: Slot in which the item should be placed
+    slot: 8
+    # PL: Przedmiot dawany do ekwipunku
+    # EN: Item given to the inventory
+    item:
+      type: book
+      amount: 1
+      display-name: '&6Information book'
+      lore:
+      - '&7Click &6PPM &7to open information book!'
+    # PL: Lista stron
+    #     Dostępne zmienne: {player}
+    #     Wspiera PlaceholderAPI
+    # EN: List of pages
+    #     Placeholders: {player}
+    #     Support PlaceholderAPI
+    pages:
+      page-1:
+      - '&b&lServer news'
+      - ''
+      - '&0Hello {player}!'
+      - '&0Thank you for choosing out plugin!'
+      - '&0You can configure this message'
+    # PL: Czy uprawnienie jest wymagane?
+    # EN: Whether the permission is to be required?
+    # Permission: crazyhub.super_item.information_book
+    permissionRequired: false
+  # PL: Konfiguracja przedmiotu do ukrywania graczy
+  # EN: Configuring item to hide players
+  visibility-super-item-configuration:
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+    # PL: Uprawnienia, którch posiadacze nie będą ukrywani
+    # EN: Privileges whose holders will not be hidden
+    privileges-ignored:
+    - group.vip
+    - group.svip
+    # PL: Wiadomość wysyłana podczas interakcji
+    #     Dostępne zmienne: {delay}
+    # EN: Message sent when player has to wait until next interact
+    #     Placeholders: {delay}
+    delay-message:
+      messages:
+        chat: '&cYou must wait {delay}!'
+      extra-components: {}
+    # PL: Wiadomość wysyłana podczas interakcji
+    # EN: Message sent during interaction
+    toggle-messages:
+      TOGGLE_ON:
+        messages:
+          title: '&aThe players have been hidden!'
+        extra-components:
+          title: fade-in(500) stay(3500) fade-out(1000)
+      TOGGLE_OFF:
+        messages:
+          title: '&aYou can see everyone from now on!'
+        extra-components:
+          title: fade-in(500) stay(3500) fade-out(1000)
+    # PL: Slot w którym przedmiot powinien być umiejscowiony
+    # EN: Slot in which the item should be placed
+    slot: 0
+    # PL: Czy uprawnienie jest wymagane?
+    # PL: Uprawnienie: crazyhub.super_item.visibility
+    # EN: Whether the permission is to be required?
+    # EN: Permission: crazyhub.super_item.visibility
+    permissionRequired: false
+    # PL: Przedmiot dawany do ekwipunku
+    # EN: Item given to the inventory
+    item:
+      type: nether_star
+      amount: 1
+      display-name: '&bToggle hidden players'
+      lore:
+      - '&7Click &bPPM &7to hide/show players!'
+    # PL: Odstęp czasowy pomiędzy użyciem
+    # EN: Delay between using
+    delay: 10s
+  # PL: Konfiguracja przedmiotu pozwalającego na latanie
+  # EN: Configuration fly item
+  fly-super-item-configuration:
+    # PL: Slot w którym przedmiot powinien być umiejscowiony
+    # EN: Slot in which the item should be placed
+    slot: 1
+    # PL: Wiadomość wysyłana podczas interakcji
+    #     Dostępne zmienne: {delay}
+    # EN: Message sent when player has to wait until next interact
+    #     Placeholders: {delay}
+    delay-message:
+      messages:
+        chat: '&cYou must wait {delay}!'
+      extra-components: {}
+    # PL: Przedmiot dawany do ekwipunku
+    # EN: Item given to the inventory
+    item:
+      type: feather
+      amount: 1
+      display-name: '&eToggle fly mode'
+      lore:
+      - '&7Click &ePPM &7to toggle!'
+    # PL: Wiadomość wysyłana podczas interakcji
+    # EN: Message sent during interaction
+    toggle-messages:
+      TOGGLE_ON:
+        messages:
+          title: '&aYou can fly now!'
+        extra-components:
+          title: fade-in(500) stay(3500) fade-out(1000)
+      TOGGLE_OFF:
+        messages:
+          title: '&aYou can''t fly :<'
+        extra-components:
+          title: fade-in(500) stay(3500) fade-out(1000)
+    # PL: Czy uprawnienie jest wymagane?
+    #     Uprawnienie: crazyhub.super_item.fly
+    # EN: Whether the permission is to be required?
+    #     Permission: crazyhub.super_item.fly
+    permissionRequired: false
+    # PL: Odstęp czasowy pomiędzy użyciem
+    # EN: Delay between using
+    delay: 10s
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+# PL: Konfiguracja teleportacji w otchłani
+# EN: Configuration of falling into the void
+teleport-void-configuration:
+  # PL: Niestandardowa lokalizacja do teleportacji
+  # EN: Custom location to teleport
+  custom-location:
+    world: world
+    x: 0.0
+    y: 100.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+  # PL: Lokacja Y, poniżej której gracz jest teleportowany
+  # EN: Y location, below which the player is teleported
+  teleport-height: 0
+  # PL: Czy funkcja ma być aktywna?
+  # EN: Should the feature be enabled?
+  enable: true
+  # PL: Czy niestandardowa lokalizacja do teleportacji powinna być włączona?
+  #     Podstawowo gracz jest teleportowany na lokalizację spawnu
+  # EN: Should the custom location to teleport be enabled?
+  #     Basically the player is teleported to the spawn location
+  custom-location-enable: false
+# PL: Konfiguracja spawnu
+# EN: Spawn configuration
+spawn-configuration:
+  # PL: Czy gracz powinien zostać teleportowany do lokacji po wejściu na serwer?
+  # EN: Should a player be teleported to a location upon entering the server?
+  teleport-after-join: true
+  # PL: Lokalizacja spawnu
+  # EN: Spawn location
+  spawn-location:
+    world: world
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+  # PL: Czy gracz powinien zostać teleportowany do lokacji po śmierci?
+  # EN: Should a player be teleported to a location after death?
+  teleport-after-death: true
+# PL: Konfiguracja wiadomości bossbar
+# EN: Configuration of bossbar messages
+boss-bar-message-configuration:
+  # PL: Styl paska smoka
+  #     Dostępne style: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+  # EN: Boss bar color
+  #     Available style: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+  overlay: NOTCHED_20
+  # PL: Progress paska smoka
+  # EN: Boss bar progress
+  progress: 1.0
+  # PL: Nazwa paska smoka
+  #     Wspiera PlaceholderAPI
+  # EN: Boss bar name
+  #     Support PlaceholderAPI
+  name: '&8[&a#&8] &7Nice to see you! &8[&a#&8]'
+  # PL: Kolor paska smoka
+  #     Dostępne kolory: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  # EN: Boss bar color
+  #     Available colors: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  color: GREEN
+  # PL: Czy funkcja ma być aktywna?
+  # EN: Should the feature be enabled?
+  enable: true
+# PL: Konfiguracja tablisty
+# EN: Configuration tablist
+tablist-configuration:
+  # PL: Tekst na dole tablisty
+  #     Wspiera PlaceholderAPI
+  # EN: Text at bottom of the list tab
+  #     Support PlaceholderAPI
+  footer:
+  - ''
+  - '&aVisit our website: &2https://www.crazycast.eu'
+  - ''
+  # PL: Czy funkcja ma być aktywna?
+  # EN: Should the feature be enabled?
+  enable: true
+  # PL: Tekst na górze tablisty
+  #     Wspiera PlaceholderAPI
+  # EN: Text at the top of the list tab
+  #     Support PlaceholderAPI
+  header:
+  - ''
+  - '&b&lCrazyHub'
+  - '&7There aren''t a lot of built-in placeholders in the plugin :<'
+  - '&7But for that we have PlaceholderAPI support!'
+  - ''
+# PL: Konfiguracja grup
+# PL: Wymagany plugin: Vault
+# EN: Configuration groups
+# EN: Required plugin: Vault
+group-configuration:
+  # Configure name tag format
+  name-tag-configuration:
+    # PL: Kolejność, w jakiej gracze z danymi grupami mają być sortowani na tabliście
+    #     Wymaga pluginu: Vault
+    # EN: The order in which space is available for sorting in the tablist
+    #     Requires plugin: Vault
+    group-sorting:
+    - admin
+    - vip
+    - default
+    # PL: Tekst wyświetlany obok nicku gracza zależny od rangi
+    #     Wymaga pluginu: Vault
+    # EN: Text next to player's nickname dependent on rank
+    #     Requires plugin: Vault
+    format:
+      default:
+        prefix: ''
+        suffix: ''
+      vip:
+        prefix: '&8[&6&lVIP&8]'
+        suffix: '&8(&bPREMIUM&8)'
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+  # Format configuration on chat
+  chat-configuration:
+    # PL: Czy chat powinien być aktywny?
+    # EN: Should the chat be active?
+    chat-enable: true
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+    # PL: Format chatu dla grup
+    #     Wymaga pluginu: Vault
+    #     Dostępne zmienne: {player}, {message}
+    # EN: Chat format for groups
+    #     Required plugin: Vault
+    #     Placeholders: {player}, {message}
+    format:
+      default: '&8{player}: &7{message}'
+# PL: Konfiguracja cyklu dnia i pogody
+# EN: Day and weather cycle configuration
+time-and-weather-configuration:
+  # PL: Konfiguracja pogody
+  # EN: Weather configuration
+  weather-configuration:
+    # PL: Czy domyślna pogoda w Minecrafcie powinna być włączona?
+    # EN: Should the default minecraft weather be turned on?
+    default-weather: false
+    # PL: Typy pogody:
+    # EN: Type of weather:
+    # SUNNY, RAINY, STORM
+    weather-type: SUNNY
+  # PL: Konfiguracja czasu w grze
+  # EN: Game time configuration
+  time-configuration:
+    # PL: Jaki rodzaj czasu powinien być aktywny?
+    #     DEFAULT - Domyślny cykl dzienny w grze Minecraft
+    #     CUSTOM - czas niestandardowy
+    # EN: What type of time should be active?
+    #     DEFAULT - Default minecraft day cycle
+    #     CUSTOM - Custom time
+    time-type: CUSTOM
+    # PL: Czas niestandardowy
+    #     Działa tylko wtedy, gdy typ czasu jest ustawiony na CUSTOM
+    #     Możesz przeliczyć to jako godziny * 1000, np. 10000 to 10 rano, 18000 to 6 po południu
+    # EN: Custom time
+    #     Works only if time-type is set to CUSTOM
+    #     You can recalculate this as hours * 1000, e.g: 10000 is 10am, 18000 is 6pm
+    custom-time: 1000
+# PL: Konfiguracja powitalna
+# EN: Welcome configuration
+welcome-configuration:
+  # PL: Rozgłaszaj wiadomość, jeśli gracz dołączy. Ustaw puste, jeżeli wiadomość ma się nie wysyłać
+  #     Dostępne zmienne: {player}
+  #     Wspiera PlaceholderAPI
+  # EN: Broadcast message if player join. Set empty if null
+  #     Placeholders: {player}
+  #     Support PlaceholderAPI
+  broadcast-message: ' &8[&b&l!&8] &aWelcome on server &b{player}'
+  # PL: Konfiguracja powitalnej książki
+  # EN: Welcome book configuration
+  welcome-book-configuration:
+    # PL: Czy funkcja ma być aktywna?
+    # EN: Should the feature be enabled?
+    enable: true
+    # PL: Lista stron
+    #     Dostepne zmienne: {player}
+    #     Wspiera PlaceholderAPI
+    # EN: List of pages
+    #     Placeholders: {player}
+    #     Support PlaceholderAPI
+    pages:
+    - - '      &b&lCrazyHub'
+      - '   &a&o(By: CrazyCast)'
+      - ''
+      - '&0┃Thanks for using'
+      - '&0┃our plugin  '
+      - '&0┃The plugin is fully '
+      - '&0┃customizable, you'
+      - '&0┃can change'
+      - '&0┃everything!'
+      - ''
+      - <click:open_url:'https://youtube.com/@crazycast.official'>&c&l[OPEN YOUTUBE]
+      - <click:open_url:'https://www.instagram.com/crazycast.official/'>&6&l[OPEN
+        INSTAGRAM]
+      - <click:open_url:'https://discord.gg/crazycast'>&9&l[OPEN DISCORD]
+      - <click:open_url:'https://www.crazycast.eu'>&9&l[OPEN WEBSITE]
+  join-message:
+    messages:
+      bossbar: '&8[&b&l!&8] &aNice to see you!'
+      title: '&b&lcrazyhub{new}&aEdit configuration!'
+      chat: '&a&lWelcome {player}'
+    extra-components:
+      bossbar: progress(1.0) color(pink) overlay(progress)
+      title: fade-in(500) stay(3500) fade-out(1000)
+# PL: Konfiguracja automatycznych wiadomości na czacie
+# EN: Configuration of auto-messages on chat
+auto-message-configuration:
+  # PL: Lista automatycznych wiadomości
+  # EN: Auto messages list
+  auto-messages:
+  - - ''
+    - '     &8&m─────&8[ &b&lCrazyHub &8}&8&m─────'
+    - '        &fWho is author of this plugin?'
+    - ''
+  # PL: Co jaki czas wiadomości mają być wysyłane?
+  # EN: Every how much time the message should be sent
+  repeat-time: 30s
+  # PL: Czy funkcja ma być aktywna?
+  # EN: Should the feature be enabled?
+  enable: true
+  # PL: Kolejnośc w jakiej wiadomości mają być wysyłane
+  #     ORIGINAL - Podstawowa kolejność
+  #     RANDOM - Losowa kolejność
+  # EN: The order in which the messages are sent
+  #     ORIGINAL - Original order
+  #     RANDOM - Random order
+  order: ORIGINAL
+# PL: Konfiguracja launch-pada
+# EN: Configuration launch-pad
+launch-pad-configuration:
+  # PL: Lista przedmiotów, która wyrzuca gracza w powietrze
+  # EN: List of materials, that run launch pad
+  launch-pad-materials:
+  - tnt
+  # PL: Czy funkcja ma być aktywna?
+  # EN: Should the feature be enabled?
+  enable: true
+# PL: Konfiguracja nazw jednostek czasowych
+# EN: Configuration name of time units
+chrono-unit-format:
+  DAYS:
+  - day
+  - days
+  MONTHS:
+  - month
+  - months
+  WEEKS:
+  - week
+  - weeks
+  HOURS:
+  - hour
+  - hours
+  SECONDS:
+  - second
+  - seconds
+  MINUTES:
+  - minute
+  - minutes
