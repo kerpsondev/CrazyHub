@@ -1,0 +1,67 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~                                  ~
+# ~            crazyhub              ~
+# ~                                  ~
+# ~ Version: 1.0.1                   ~
+# ~ Author: kerpson                  ~
+# ~ Website: www.crazycast.eu        ~
+# ~                                  ~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# PL: Wiadomość po ustawieniu nowej lokalizacji spawnu
+# EN: Message after setting new spawn location
+set-spawn-location-message:
+  messages:
+    chat: '&aSet new spawn location'
+  extra-components: {}
+# PL: Wiadomość po poprawnym przeładowaniu konfiguracji
+# EN: Message after correct reload of configuration
+plugin-reload-success-message:
+  messages:
+    chat: '&aPlugin successfully reloaded!'
+  extra-components: {}
+# PL: Informacje o dostępnych komendach
+# EN: Information on available commands
+help-message:
+- ''
+- '          <gradient:#09DEFB:#2599B3><bold>CrazyHub'
+- ' &8[&b#&8] &a/crazyhub setspawn &7- Set spawn location for player'
+- ' &8[&b#&8] &a/crazyhub voidSpawn &7- Set spawn location after fall void'
+- ' &8[&b#&8] &a/crazyhub reload &7- Reload plugin configuration'
+- ' &8[&b#&8] &a/crazyhub bypass &7- Toggle bypass for protection flags'
+- ''
+# PL: Wiadomość po ustawieniu nowej lokalizacji po spadnięciu w otchłań
+# EN: Message after setting a new location after falling into the void
+set-spawn-void-location-message:
+  messages:
+    chat: '&aSet new spawn location'
+  extra-components: {}
+# PL: Wiadomość gdy prefix dla grupy gracza nie zostanie znaleziony
+#     Dostępne zmienne: {group}
+#     Wymaga plugin: Vault
+# EN: Message when prefix for player group not found
+#     Placeholders: {group}
+#     Required plugin: Vault
+prefix-for-group-not-found-message:
+  messages:
+    chat: '&8[&4#&8] &cCan''t find prefix for group {group}'
+  extra-components: {}
+# PL: Wiadomość o braku uprawnień
+#     Dostępne zmienne: {permission}
+# EN: Message about no permissions
+#     Placeholders: {permission}
+no-permission-message:
+  messages:
+    chat: '&8[&4#&8] &cNo permission required! &8(&6{permission}&8)'
+  extra-components: {}
+# PL: Wiadomość po próbie wysłania wiadomości gdy chat jest wyłączony
+# EN: Message after trying to send a message when chat is off
+disable-chat-message:
+  messages:
+    chat: '&8[&4#&8] &cChat is disabled!'
+  extra-components: {}
+# PL: Wiadomość po niepoprawnym przeładowaniu konfiguracji
+# EN: Message after incorrect reload of configuration
+plugin-reload-failed-message:
+  messages:
+    chat: '&8[&4#&8] &cCan''t load configuration! Check console'
+  extra-components: {}
