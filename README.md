@@ -1,2 +1,1 @@
-# CrazyHub
-Advanced hub server plugin
+![](https://i.imgur.com/JoyOHuq.png)
