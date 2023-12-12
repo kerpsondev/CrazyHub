@@ -1,0 +1,54 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~                                  ~
+# ~            crazyhub              ~
+# ~                                  ~
+# ~ Version: 1.0.1                   ~
+# ~ Author: kerpson                  ~
+# ~ Website: www.crazycast.eu        ~
+# ~                                  ~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# PL: Konfiguracja gui dla wyboru serwerów
+# EN: Configuration server selector gui
+server-selector-view-configuration:
+  # PL: Nazwa ekwipunku
+  # EN: Name of gui
+  gui-name: '&f&lChoose a server!'
+  # PL: Wypełnienie ekwipunku
+  #     Konfiguracja slotów:
+  #     > 0-35 - Wszystkie sloty od 0 do 35
+  #     > 35 - Tylko jeden slot
+  # EN: Filling inventory
+  #     Slot configuration:
+  #     > 0-35 - All slots from 0 to 35
+  #     > 1 - One slot only
+  inventory-filled:
+    '0':
+      type: stone
+      amount: 1
+    0-26:
+      type: black_stained_glass_pane
+      amount: 1
+    '1':
+      type: dirt
+      amount: 1
+  # PL: Ile wierszy powinno zawierać GUI?
+  #     Ważne! Wartość musi być większa niż 0, ale mniejsza niż 7
+  # EN: How many rows should the gui contain?
+  #     Important! The value must be greater than 0, but less than 7
+  rows: 3
+  # PL: Ustawienie serwerów w gui
+  #     Dostępne zmienne dla opisu: {online}, {slots}, {status}, {tps}, {cpu}
+  #     Aby skumulować liczbę graczy online z kilku serwerów użyj: {online:server_1,server_2,server_3} np. {online:survival,skyblock}
+  # EN: Setting up servers in the gui
+  #     Placeholders for lore: {online}, {slots}, {status}, {tps}, {cpu}
+  #     To accumulate the number of online players from several servers use: {online:server_1,server_2,server_3} e.g. {online:survival,skyblock}
+  server-inventory-settings:
+    survival:
+      slot: 13
+      icon:
+        type: diamond
+        amount: 1
+      display-name: '&aServer survival'
+      lore:
+      - 'Online: {online}/{slots}'
+      - 'Status: {status}'
