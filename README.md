@@ -1,4 +1,4 @@
-![](https://i.imgur.com/JoyOHuq.png)
+![](https://i.imgur.com/Somns1r.png)
 
 [![Discord](https://img.shields.io/discord/1142577635290001438.svg?label=discord&logo=discord)](https://discord.gg/crazycast)
 [![GitHub release](https://img.shields.io/github/release/kerpsondev/CrazyHub?include_prereleases=&sort=semver&color=blue)](https://github.com/kerpsondev/CrazyHub/releases/)
